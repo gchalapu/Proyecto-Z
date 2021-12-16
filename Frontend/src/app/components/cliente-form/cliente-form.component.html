@@ -1,1 +1,26 @@
-<p>cliente-form works!</p>
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-body">
+        <form>
+            <div class="form-group">
+                <input class="form-control" name="nick_usu" [(ngModel)]="cliente.nick_usu" type="text" placeholder="Nick" aria-label="Disabled input example" > <p>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="nom_usu" [(ngModel)]="cliente.nom_usu" type="text" placeholder="Nombre " aria-label="Disabled input example" ><p>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="corr_usu" [(ngModel)]="cliente.corr_usu" type="email" placeholder="Correo" aria-label="Disabled input example" > <p>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="telf_usu" [(ngModel)]="cliente.telf_usu" type="tel" placeholder="Telefono" aria-label="Disabled input example" > <p>
+            </div>
+
+            <button  class="btn btn-success btn-block" (click)="edit ? actualizarCliente() : GuardarCliente()" >
+                Guardar
+            </button>
+
+            
+        </form>
+        </div>
+    </div>
+</div>

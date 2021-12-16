@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { ClienteFormComponent } from './components/cliente-form/cliente-form.component';
 import { ClienteListComponent } from './components/cliente-list/cliente-list.component';
-
+import {FormsModule} from '@angular/forms';
 
 import {ClienteService} from './servicios/cliente.service';
 
@@ -20,7 +20,8 @@ import {ClienteService} from './servicios/cliente.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     ClienteService

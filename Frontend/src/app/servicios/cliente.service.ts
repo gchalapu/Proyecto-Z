@@ -25,10 +25,10 @@ API_URL = 'http://localhost:3000/api';
    }
 
    saveCliente(clientes: Cliente ){
-    return this.http.post(`${this.API_URL}/cliente`, clientes);
+    return this.http.post(`${this.API_URL}/clientes`, clientes);
    }
 
-   updateCliente(id: string, updateCliente: Cliente): Observable<Cliente> {
+   updateCliente(id: string|number, updateCliente: Cliente): Observable<Cliente> {
      return this.http.put(`${this.API_URL}/clientes/${id}`, updateCliente);
    }
 }

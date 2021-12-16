@@ -3,6 +3,10 @@ import morgan from 'morgan';
 import cors from 'cors';
 import indexRoutes from './routes/indexRoutes';
 import clientesRoutes from './routes/clientesRoutes';
+import actividadesRoutes from './routes/actividadesRoutes';
+
+
+
 class Servidor {
 
     public app: Application;
@@ -24,6 +28,7 @@ class Servidor {
     routes(): void{
         this.app.use('/',indexRoutes);
         this.app.use('/api/clientes',clientesRoutes);
+        this.app.use('/api/actividades',clientesRoutes);
     }
     
     start(): void{

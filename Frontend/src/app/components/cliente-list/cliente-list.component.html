@@ -1,7 +1,43 @@
-<div class="col-md-4" *ngFor="let clientes of clientes">  
- <div class="card text-center "> 
-     <div class="card-header bg-primary text-white">  
+<div class="col-md-4"  > 
+   <a class="btn btn-primary btn-lg " href="clientes/agregar" role="button" aria-disabled="true">Agregar Usuario</a><p>
+ <table class="table table table-bordered"> 
+     
+   <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">NICKNAME</th>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">CORREO</th>
+        <th scope="col">TELEFONO</th>
+      
+        
+      </tr>
+      <tr *ngFor="let clientes of clientes; index as i">
+         <th scope="row">{{i+1}}</th>
+         <td>{{clientes.id_usu}}</td>
+         <td>{{clientes.nick_usu}}</td>
+         <td>{{clientes.nom_usu}}</td>
+         <td>{{clientes.corr_usu}}</td>
+         <td>{{clientes.telf_usu}}</td>
+         <button class=""(click)="borrarCliente(clientes.id_usu)" >
+            <i class="fas fa-trash"></i>
+          </button>
+          <button class="" >
+            <i [routerLink]="['/clientes/editar', clientes.id_usu]"class="fas fa-eraser" ></i>
+          </button>
+          
+       </tr>
+    </thead>
+    <tbody>
+     
+    
+      
+    </tbody>
+   
+   <!-- <div class="card-header bg-primary text-white">  
         {{clientes.nom_usu}}
+        
      </div>
      <div class="card-body">    
         {{clientes.nick_usu}}
@@ -9,7 +45,10 @@
      <div class="card-footer">    
         {{clientes.telf_usu}}
      </div>
- </div><br>
-</div>
+ </div><br> -->
+ 
+</table>
+
+
 
 
